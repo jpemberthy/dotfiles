@@ -1,0 +1,9 @@
+[user]
+	name = jpemberthy
+	email = jpemberthy@gmail.com
+[alias]
+	co = checkout
+	b = branch
+	ba = branch -a
+	bd = branch -d
+	
