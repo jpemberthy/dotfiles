@@ -1,0 +1,15 @@
+upstream acoplet {
+	server 127.0.0.1:8000;
+}
+
+server {
+	listen 80;
+	server_name  127.0.0.1 live;
+	access_log /home/acoplet/www/acoplet/current/log/thin.log;
+	root /home/acoplet/www/acoplet/current/;
+	error_log /home/acoplet/www/acoplet/current/log/error.log;
+
+	location / {
+    	proxy_pass http://acoplet;
+	}
+}
