@@ -41,4 +41,6 @@ alias jpacoplet="ssh jpemberthy@201.232.143.199"
 #alias app
 alias mertd="cd ~/projects/rails_projects/personal/mertd/"
 
+#capistrano alias
+alias p_log="cap jprecipes:p_log"
 export PATH="/usr/local/mysql/bin:$PATH"
