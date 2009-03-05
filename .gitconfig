@@ -6,4 +6,4 @@
 	b = branch
 	ba = branch -a
 	bd = branch -d
-	
+	rh = reset --hard
