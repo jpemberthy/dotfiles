@@ -1,9 +1,15 @@
 [user]
-	name = jpemberthy
-	email = jpemberthy@gmail.com
+  name = jpemberthy
+  email = jpemberthy@gmail.com
 [alias]
-	co = checkout
-	b = branch
-	ba = branch -a
-	bd = branch -d
-	rh = reset --hard
+  co = checkout
+  b = branch
+  ba = branch -a
+  bd = branch -d
+  rh = reset --hard
+  st = status
+  rl = reset --hard HEAD^
+[color]
+  status = auto
+  log = auto
+  ui = auto

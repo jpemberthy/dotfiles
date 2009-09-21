@@ -8,7 +8,16 @@ PS1='\h:\W \u\$ '
 shopt -s checkwinsize
 
 #color
-alias ls='ls -G'
+#alias ls='ls -G'
+# alias ll='ls -l'
+# export CLICOLOR=1
+# export LSCOLORS=ExFxCxDxBxegedabagacad
+
+export TERM="xterm-color"
+
+alias ls="ls -G"
+
+PS1="\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\]"
 
 #let's add de MacPorts
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
@@ -25,6 +34,9 @@ alias sg="ruby script/generate"
 alias rtest="RAILS_ENV=test"
 alias rdevel="RAILS_ENV=development"
 alias rprod="RAILS_ENV=production"
+
+alias cpd='cap deploy'
+alias rs='rake spec'
 
 #fix autotest
 alias autest="RSPEC=true autotest"
@@ -53,5 +65,22 @@ alias p_log="cap jprecipes:p_log"
 #tex alias
 alias mpdf="pdflatex tesis.tex"
 alias bmetex="bibtex tesis"
+
+#git alias.
+alias commit='git commit -v'
+alias pull='git pull'
+alias gd='git diff'
+alias gfp='git-format-patch'
+alias gbb='git bisect bad'
+alias gbg='git bisect good'
+alias gl='git log'
+
+function gp {
+  current_branch=`git branch | grep \* | awk '{print $2}'`
+  git push origin $current_branch
+}
+
+#apache alias
+alias apache2ctl='sudo /opt/local/apache2/bin/apachectl'
 
 export PATH="/usr/local/mysql/bin:$PATH"
