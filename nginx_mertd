@@ -1,0 +1,46 @@
+upstream mertd {
+        server 127.0.0.1:8000;
+}
+
+server {
+	listen 80;
+    server_name www.mertd.com;
+    rewrite ^/(.*) http://mertd.com/$1 permanent;	
+	}
+
+server {
+    listen 80;
+	server_name mertd.com;
+    client_max_body_size 25M;
+
+    root /home/mertd/www/mertd/current/public/;
+    access_log  /home/mertd/www/mertd/current/log/access.log  main;
+
+    if (-f $document_root/system/maintenance.html) {
+      rewrite  ^(.*)$  /system/maintenance.html last;
+      break;
+    }
+
+    location / {
+      proxy_set_header  X-Real-IP  $remote_addr;
+      proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_redirect false;
+      proxy_max_temp_file_size 0;
+      if (-f $request_filename) {
+        break;
+      }
+      if (-f $request_filename/index.html) {
+        rewrite (.*) $1/index.html break;
+      }
+      if (!-f $request_filename) {
+        proxy_pass http://mertd;
+        break;
+      }
+	    }
+
+	    error_page   500 502 503 504  /500.html;
+	    location = /500.html {
+	    root /home/mertd/www/mertd/current/public;
+	    }
+	 }
