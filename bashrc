@@ -24,19 +24,20 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 #alias for mysql
 alias dbs='sudo /usr/local/mysql/bin/mysqld_safe'
-alias dcmertd='scp mertd@209.20.76.22:mertd.sql /Users/jpemberthy/Desktop'
 
 #rails alias
-alias ss="ruby script/server webrick --debugger"
-alias sc="ruby script/console"
+alias ss="rails server --debugger"
+alias sc="rails console"
 alias tu="ruby test/unit"
-alias sg="ruby script/generate"
+alias rg="rails generate"
 alias rtest="RAILS_ENV=test"
 alias rdevel="RAILS_ENV=development"
 alias rprod="RAILS_ENV=production"
 
 alias cpd='cap deploy'
+alias cppd="cap production deploy"
 alias rs='rake spec'
+
 
 #fix autotest
 alias autest="RSPEC=true autotest"
@@ -57,9 +58,16 @@ alias colmimg="ssh colmimg@190.146.128.192"
 
 #alias app
 alias mertd="cd ~/projects/rails_projects/personal/mertd/"
+alias rockingshark="cd ~/projects/rails_projects/martian/rockingshark"
+alias learnhvac="cd ~/projects/rails_projects/martian/learnhvac"
 
 #capistrano alias
 alias p_log="cap jprecipes:p_log"
+
+
+#cron alias
+alias wup="whenever --update-crontab"
+alias crtl="crontab -l"
 
 
 #tex alias
