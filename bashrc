@@ -26,13 +26,23 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 alias dbs='sudo /usr/local/mysql/bin/mysqld_safe'
 
 #rails alias
-alias ss="rails server --debugger"
-alias sc="rails console"
+alias ss="script/server --debugger"
+alias sc="script/console console"
+alias sg="script/generate"
 alias tu="ruby test/unit"
-alias rg="rails generate"
 alias rtest="RAILS_ENV=test"
 alias rdevel="RAILS_ENV=development"
 alias rprod="RAILS_ENV=production"
+
+#rails 3
+alias rs="rails s --debugger"
+alias rc="rails c"
+alias rdb="rails db"
+alias rg="rails generate"
+alias bi="bundle install"
+alias bch="bundle check"
+alias bp="bundle pack"
+
 
 alias cpd='cap deploy'
 alias cppd="cap production deploy"
