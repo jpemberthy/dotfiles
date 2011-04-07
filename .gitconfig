@@ -1,6 +1,6 @@
 [user]
-  name = jpemberthy
-  email = jpemberthy@gmail.com
+	name = jpemberthy
+	email = jpemberthy@gmail.com
 [alias]
   co = checkout
   b = branch
@@ -9,7 +9,12 @@
   rh = reset --hard
   st = status
   rl = reset --hard HEAD^
+  cp = cherry-pick
 [color]
   status = auto
   log = auto
   ui = auto
+[core]
+    editor = mate -w
+[pivotal]
+	full-name = Juan Pemberthy
