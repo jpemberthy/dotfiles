@@ -1,0 +1,18 @@
+[user]
+	name = Juan Pemberthy
+	email = jpemberthy@gmail.com
+	author = jpemberthy
+[alias]
+  co = checkout
+  b = branch
+  ba = branch -a
+  bd = branch -d
+  rh = reset --hard
+  st = status
+  rl = reset --hard HEAD^
+[color]
+  status = auto
+  log = auto
+  ui = auto
+[core]
+	excludesfile = /Users/jpemberthy/.gitignore_global
