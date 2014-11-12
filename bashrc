@@ -75,7 +75,6 @@ alias wup="whenever --update-crontab"
 alias crtl="crontab -l"
 
 #git alias.
-alias commit='git commit -v'
 alias gd='git diff'
 alias gfp='git-format-patch'
 alias gbb='git bisect bad'
@@ -86,11 +85,14 @@ alias gcleanup='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias ga='git add'
 alias gco='git checkout'
 alias gst='git status'
+alias gc='git commit -v'
 
 alias redistart='redis-server /usr/local/etc/redis.conf'
 alias mongostart='mongod run --config /usr/local/etc/mongod.conf'
 
 alias gitxpop="open -a gitx ."
+
+alias rcam="sudo killall VDCAssistant"
 
 alias ssht='ssh -D 8080 -f -C -q -N neider@bolsaenred.com'
 
@@ -102,6 +104,13 @@ alias naview="nanoc view"
 alias lolcale="echo 'locale = en_US' > /Applications/League\ of\ Legends.app/Contents/LOL/RADS/system/locale.cfg"
 
 JAVA_HOME="/usr/libexec/java_home"
+
+# https://github.com/pcmanus/ccm/issues/87
+function ccmnodesup {
+  sudo ifconfig lo0 alias 127.0.0.1 up
+  sudo ifconfig lo0 alias 127.0.0.2 up
+  sudo ifconfig lo0 alias 127.0.0.3 up
+}
 
 function gp {
   current_branch=`git branch | grep \* | awk '{print $2}'`
@@ -134,11 +143,16 @@ function parse_git_branch {
 
 alias grep="grep --color=auto"
 alias nginx="/usr/local/Cellar/nginx/0.8.54/sbin/nginx"
-export EDITOR=/Applications/TextMate.app//Contents/SharedSupport/Support/bin/mate
+export EDITOR=/Applications/Atom.app/Contents/MacOS/Atom
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/Users/jpemberthy/work/whi/bin:$PATH
 export PATH=/usr/local/share/npm/bin/:$PATH
+
+# GO
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # export EDITOR=nano
 # export EDITOR="/usr/local/bin/mate -w"
 
@@ -150,3 +164,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home
 
 # export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/Current
+eval "$(pyenv init -)"
+
+# alias emacs='open -a /Applications/Emacs.app $1'
