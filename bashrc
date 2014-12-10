@@ -68,6 +68,10 @@ function staging_deploy {
   gp && bundle exec cap -s branch=$current_branch $staging deploy
 }
 
+function running_on {
+   sudo lsof -i :$1
+}
+
 alias vps="ssh neider@64.71.167.222"
 alias timehub="ssh root@65.39.226.140"
 #cron alias
