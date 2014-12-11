@@ -156,6 +156,11 @@ export PATH=/usr/local/share/npm/bin/:$PATH
 # GO
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+alias got="go test"
+alias gog="go get"
+alias gob="go build"
+alias goi="go install"
+alias gohome='cd "$(echo $GOPATH)"'
 
 # export EDITOR=nano
 # export EDITOR="/usr/local/bin/mate -w"
