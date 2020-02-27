@@ -1,0 +1,46 @@
+/* ~/Library/KeyBindings/DefaultKeyBinding.Dict
+
+This file remaps the key bindings of a single user on Mac OS X 10.14.16 to more
+closely match default behavior on Windows systems. This makes the Command key
+behave like Windows Control key. To use Control instead of Command, either swap
+Control and Command in Apple->System Preferences->Keyboard->Modifier Keys...
+or replace @ with ^ in this file.
+
+Here is a rough cheatsheet for syntax.
+Key Modifiers
+^ : Ctrl
+$ : Shift
+~ : Option (Alt)
+@ : Command (Apple)
+# : Numeric Keypad
+
+Non-Printable Key Codes
+
+Standard
+Up Arrow:     \UF700        Backspace:    \U0008        F1:           \UF704
+Down Arrow:   \UF701        Tab:          \U0009        F2:           \UF705
+Left Arrow:   \UF702        Escape:       \U001B        F3:           \UF706
+Right Arrow:  \UF703        Enter:        \U000A        ...
+Insert:       \UF727        Page Up:      \UF72C
+Delete:       \UF728        Page Down:    \UF72D
+Home:         \UF729        Print Screen: \UF72E
+End:          \UF72B        Scroll Lock:  \UF72F
+Break:        \UF732        Pause:        \UF730
+SysReq:       \UF731        Menu:         \UF735
+Help:         \UF746
+
+OS X
+delete:       \U007F
+
+For a good reference see http://osxnotes.net/keybindings.html.
+Inspired on https://gist.github.com/trusktr/1e5e516df4e8032cbc3d
+
+*/
+
+{
+    "~b"      = "moveWordBackward:";                            /* Option + b */
+    "~f"      = "moveWordForward:";                             /* Option + f */
+
+    "~$B"     = "moveWordBackwardAndModifySelection:";          /* Shift + Option + B */
+    "~$F"     = "moveWordForwardAndModifySelection:";           /* Shift + Option + F */
+}
