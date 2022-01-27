@@ -101,5 +101,3 @@ function forever {
 }
 
 alias grep="grep --color=auto"
-
-eval "$(rbenv init -)"
