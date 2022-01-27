@@ -1,7 +1,9 @@
 [user]
-	name = jpemberthy
-	email = jpemberthy@gmail.com
+  name = Juan Pemberthy
+  email = jpemberthy@gmail.com
+  author = jpemberthy
 [alias]
+  ap = add -p
   co = checkout
   b = branch
   ba = branch -a
@@ -10,11 +12,26 @@
   st = status
   rl = reset --hard HEAD^
   cp = cherry-pick
+  ap = add -p
+  ss = status -sb
+  pr = pull --rebase
+  rbtheirs = rebase -s recursive -X theirs
 [color]
   status = auto
   log = auto
   ui = auto
 [core]
-    editor = mate -w
+  editor = emacs
 [pivotal]
-	full-name = Juan Pemberthy
+  full-name = Juan Pemberthy
+[github]
+  user = jpemberthy
+[push]
+  default = simple
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[mergetool]
+	keepBackup = false
