@@ -1,0 +1,44 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.quickOpen",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+e",
+    "command": "emacs-mcx.paredit.forwardSexp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+b",
+    "command": "emacs-mcx.paredit.backwardSexp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+alt+e",
+    "command": "emacs-mcx.forwardParagraph",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+a",
+    "command": "emacs-mcx.backwardParagraph",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+n",
+    "command": "cursorBottomSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+ctrl+e",
+    "command": "emacs-mcx.forwardParagraph",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+shift+t",
+    "command": "workbench.action.gotoSymbol",
+    "args": { "prefix": "@" },
+    "when": "editorTextFocus"
+  }
+]
